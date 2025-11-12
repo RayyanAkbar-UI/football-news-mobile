@@ -74,9 +74,8 @@ class MyHomePage extends StatelessWidget {
 }
 
 class InfoCard extends StatelessWidget {
-
-  final String title; 
-  final String content; 
+  final String title;
+  final String content;
 
   const InfoCard({super.key, required this.title, required this.content});
 
@@ -85,9 +84,7 @@ class InfoCard extends StatelessWidget {
     return Card(
       elevation: 2.0,
       child: Container(
-        width:
-            MediaQuery.of(context).size.width /
-            3.5, 
+        width: MediaQuery.of(context).size.width / 3.5,
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
