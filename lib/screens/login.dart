@@ -4,7 +4,6 @@ import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:football_news/screens/register.dart';
 
-
 void main() {
   runApp(const LoginApp());
 }
@@ -19,7 +18,7 @@ class LoginApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
-          .copyWith(secondary: Colors.blueAccent[400]),
+            .copyWith(secondary: Colors.blueAccent[400]),
       ),
       home: const LoginPage(),
     );
@@ -42,17 +41,17 @@ class _LoginPageState extends State<LoginPage> {
     final request = context.watch<CookieRequest>();
 
     return Scaffold(
-        appBar: AppBar(
-            title: const Text('Login'),
-        ),
-        body: Center(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16.0),
-              child: Card(
-                elevation: 8,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
+      appBar: AppBar(
+        title: const Text('Login'),
+      ),
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
+          child: Card(
+            elevation: 8,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
@@ -121,8 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                             ..hideCurrentSnackBar()
                             ..showSnackBar(
                               SnackBar(
-                                  content:
-                                      Text("$message Welcome, $uname.")),
+                                  content: Text("$message Welcome, $uname.")),
                             );
                         }
                       } else {
@@ -147,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
-                      minimumSize: Size(double.infinity, 50),
+                      minimumSize: const Size(double.infinity, 50),
                       backgroundColor: Theme.of(context).colorScheme.primary,
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
                     ),

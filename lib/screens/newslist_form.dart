@@ -94,6 +94,7 @@ class _NewsFormPageState extends State<NewsFormPage> {
                 ),
               ),
 
+              // === Category ===
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: DropdownButtonFormField<String>(
